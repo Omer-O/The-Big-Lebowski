@@ -1,0 +1,22 @@
+<form class="" action="/edit-profile" method="post">
+
+    <input type="text" name="first" value="{{first}}">
+    <input type="text" name="last" value="{{last}}">
+    <input type="email" name="email" value="{{email}}">
+    <input type="password" name="password" value="">
+    <input type="number" name="age" value="{{age}}">
+    <input type="text" name="city" value="{{city}}">
+    <input type="url" name="Homepage" value="{{url}}">
+    <input name="_csrf" type="hidden" value="{{csrfToken}}" >
+    <button type="submit" name="button">UPDATE</button>
+</form>
+
+<img src="{{signature}}" alt="signature">
+<form class="" action="/deleteSignature" method="post">
+    <button type="submit" name="button">DELETE SIGNATURE</button>
+</form>
+
+
+<form class="" action="/deleteAccount" method="post">
+    <button type="submit" name="button">DELETE ACCOUNT</button>
+</form>

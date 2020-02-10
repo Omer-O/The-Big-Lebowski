@@ -1,0 +1,24 @@
+{{#if error}}
+<p>{{errorMsg}}</p>
+{{/if}}
+<!--
+<div class="container">
+
+<h3 class="subtitle is-3">The honeyjar is not half empty yet!</h3>
+{{#if first}}
+<h3 class="subtitle is-3">{{first}} {{last}}, please join us!</h3>
+{{else}}
+<h3 class="subtitle is-3">Please join us!</h3>
+{{/if}}
+</div> -->
+<form action='/petition' method='POST'>
+    <div class='sign'>
+        <h3>SIGN HERE DUDE:</h3>
+        <input type ='hidden' id='signatureId' name='signature'/>
+        <canvas id='canvas' width='600' height='100'>canvas</canvas>
+        <br>
+        <!-- <button id='clearBtn' type='button' value='Erase'>CLEAR</button> -->
+        <input name="_csrf" type="hidden" value="{{csrfToken}}" >
+        <button id='submit' type='submit' class='submit-button'>SIGN</button>
+    </div>
+</form>

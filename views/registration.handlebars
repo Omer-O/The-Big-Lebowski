@@ -1,0 +1,25 @@
+<h1>Big Labowski Petition</h1>
+<img src="./img/dude meditation.jpg" target="img">
+<p>The Big Labowski movie is a cult movie, no doubt about that. Who ever watched, on film,
+    <bold>'The DUDE'</bold> felt a deep connection to him, his charicter symbolys a genaration that
+    had enough with the race for money and fame, a generation that just want to lay back
+    appriciate the moment and not overthinkin life, isn't that beautiful?
+    <br>
+    <br>
+    The patition is to celebrate <bold>'The DUDE'</bold> legacy.
+    <br>
+    <br>
+     If you are not familiar with <bold>'The DUDE'</bold>, then shame on you.
+</p>
+<p>Registration</p>
+<form method="POST">
+
+    <input name="first" type="text" placeholder="first" required minlength="1" pattern="[A-Za-z0-9]+" >
+    <input name="last" type="text" placeholder="last" required minlength="1" pattern="[A-Za-z0-9]+">
+    <input name="email" type="text" placeholder="email">
+    <input name="password" type="password" placeholder="password" minlength="1" pattern="[A-Za-z0-9]+">
+    <input name="_csrf" type="hidden" value="{{csrfToken}}" >
+    <button id='submit' type='submit' class='submit-button'>SIGN</button>
+
+</form>
+<p>Press here to<a href="/login">log in</a>.</p>

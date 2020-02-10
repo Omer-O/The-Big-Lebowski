@@ -1,0 +1,16 @@
+<h2>DUDEs in the city:</h2>
+<ul>
+    {{#signers}}
+        {{#if email}}
+            <li><a href="{{url}}">{{first}} {{last}}</a> From: <a href="/petition/signers/:{{city}}">{{city}}</a></li>
+        {{else}}
+            <li>{{first}} {{last}} From: <a href="/petition/signers/:{{city}}">{{city}}</a></li>
+        {{/if}}
+    {{/signers}}
+</ul>
+
+<footer>
+    <p>Press here to <a href="/edit">UPDATE</a> your account.</p>
+    <p>Press here to Delete <a href="/delete-account">ACCOUNT</a>.</p>
+    <p>Press here to Delete <a href="/delete-Signature">SIGNATURE</a>.</p>
+</footer>
