@@ -188,6 +188,8 @@ app.get("/login", (req, res) => {
 
 //login POST:
 app.post("/login", (req, res) => {
+  console.log("this is req.body", req.body);
+  
   db.user(req.body.email).then(newPass => {
     console.log("this is newPass :", newPass);
     bc.checkPassword(req.body.password, newPass.rows[0].password)

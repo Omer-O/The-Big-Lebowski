@@ -53,6 +53,16 @@ module.exports.user = function user(email) {
         [email]
     );
 };
+module.exports.users = function users(email) {
+    return db.query(
+        `SELECT email, password, city, age, url, first, last, signatures.signature, users.id AS user_id, signatures.id AS sign_id
+        FROM users
+        LEFT OUTER JOIN signatures ON users.id = signatures.user_id
+        LEFT OUTER JOIN profile ON users.id = profile.user_id
+        WHERE email=$1`,
+        [email]
+    );
+};
 module.exports.signers = function signers() {
     return db.query(
         `SELECT first, last, age, city, url
